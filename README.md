@@ -1,7 +1,7 @@
 ## Cross-Correlation Attack: Adversarial Attack for Visual Object Tracking
 ## Abstract
 
-This code are main based on (CSA(https://github.com/MasterBin-IIAU/CSA/)), (Pysot(https://github.com/STVIR/pysot)), and (Pytracking(https://github.com/visionml/pytracking)). More support can be found there.
+This code are main based on ([CSA](https://github.com/MasterBin-IIAU/CSA/)), ([Pysot](https://github.com/STVIR/pysot)), and ([Pytracking](https://github.com/visionml/pytracking)).
 
 ## Installation
 #### Clone the repository
@@ -34,7 +34,9 @@ Put them under pysot/experiments/<MODEL_NAME>
 Download **general_modelr** and **LaSOT_model** 
 Put them under pysot/experiments/siamcar_r50 and rename them to **model.pth** and **LaSOT_model.pth**, respectively.
 3. SiamBAN([Model_Zoo](https://github.com/hqucv/siamban/blob/master/MODEL_ZOO.md))
-Put them under pysot/experiments/siamban_r50 and rename them to **model.pth** and **model_vot.pth**, respectively. **model_vot.pth** is for VOT2018.
+Download **siamban_r50_l234** and **siamban_r50_l234_otb** 
+Put them under pysot/experiments/siamban_r50 and rename them to **model.pth** and **model_vot.pth**, respectively. 
+We use **model.pth** test on OTB2015 and **model_vot.pth** for VOT2018, UAV123, and LaSOT.
 4. 
 6. Perturbation Generators  
 Download checkpoints you need, then put them under checkpoints/<MODEL_NAME>/  
