@@ -31,9 +31,9 @@ python Unified_GOT10K_process.py
 Download **siamrpn_r50_l234_dwxcorr** and **siamrpn_r50_l234_dwxcorr_otb**  
 Put them under pysot/experiments/<MODEL_NAME>
 2. SiamCAR([Model_Zoo](https://github.com/ohhhyeahhh/SiamCAR))   
-Download **general_modelr** and **LaSOT_model** from BaiduYun Dwonload, or (Google driver (https://drive.google.com/drive/folders/1ud0iF4Vm96TfxOddUHV1LoY-soF2zk8b))
+Download **general_modelr** and **LaSOT_model** 
 Put them under pysot/experiments/siamcar_r50 and rename them to **model.pth** and **LaSOT_model.pth**, respectively.
-3. SiamBAN(Model_Zoo(https://github.com/hqucv/siamban/blob/master/MODEL_ZOO.md))
+3. SiamBAN([Model_Zoo](https://github.com/hqucv/siamban/blob/master/MODEL_ZOO.md))
 Put them under pysot/experiments/siamban_r50 and rename them to **model.pth** and **model_vot.pth**, respectively. **model_vot.pth** is for VOT2018.
 4. 
 6. Perturbation Generators  
