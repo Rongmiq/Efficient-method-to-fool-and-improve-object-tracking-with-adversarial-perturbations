@@ -1,17 +1,17 @@
 ## Installation
 This code has been tested on the following environment:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NVIDIA RTX-2080Ti  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ubuntu 16.04  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ubuntu 18.04  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CUDA 10.0  
 #### Clone the repository
 ```
-git clone https://github.com/MasterBin-IIAU/CSA.git
+git clone https://github.com/Rongmiq/CCA.git
 cd <Project_name>
 ```
 #### Create Environment
 ```
-conda create -n CSA python=3.6
-source activate CSA
+conda create -n CCA python=3.7
+source activate CCA
 conda install pytorch=1.0.0 torchvision cuda100 -c pytorch
 pip install -r requirements.txt
 conda install pillow=6.1
