@@ -29,22 +29,22 @@ python Unified_GOT10K_process.py
 #### Download pretrained models
 1. SiamRPN++([Model_Zoo](https://github.com/STVIR/pysot/blob/master/MODEL_ZOO.md))   
 Download **siamrpn_r50_l234_dwxcorr** and **siamrpn_r50_l234_dwxcorr_otb**  and rename them to **model.pth**.  
-Put them under pysot/experiments/<MODEL_NAME>
-We use **siamrpn_r50_l234_dwxcorr_otb** test OTB2015 and **siamrpn_r50_l234_dwxcorr** test VOT2018, UAV123, and LaSOT.
+Put them under pysot/experiments/<MODEL_NAME>  
+We use **siamrpn_r50_l234_dwxcorr_otb** test OTB2015 and **siamrpn_r50_l234_dwxcorr** test VOT2018, UAV123, and LaSOT.  
 
-2. SiamCAR([Model_Zoo](https://github.com/ohhhyeahhh/SiamCAR))   
-Download **general_modelr** and **LaSOT_model** and rename them to **model.pth** and **LaSOT_model.pth**, respectively.
-Put them under pysot/experiments/siamcar_r50. 
-We use **LaSOT_model.pth** test LaSOT and **model.pth** test OTB2015, VOT2018, and UAV123.
+2. SiamCAR([Model_Zoo](https://github.com/ohhhyeahhh/SiamCAR))     
+Download **general_modelr** and **LaSOT_model** and rename them to **model.pth** and **LaSOT_model.pth**, respectively.  
+Put them under pysot/experiments/siamcar_r50.   
+We use **LaSOT_model.pth** test LaSOT and **model.pth** test OTB2015, VOT2018, and UAV123.  
 
-3. SiamBAN([Model_Zoo](https://github.com/hqucv/siamban/blob/master/MODEL_ZOO.md))
-Download **siamban_r50_l234** and **siamban_r50_l234_otb** and rename them to **model.pth** and **model_vot.pth**, respectively. 
-Put them under pysot/experiments/siamban_r50. 
-We use **model.pth** test OTB2015 and **model_vot.pth** test VOT2018, UAV123, and LaSOT.
+3. SiamBAN([Model_Zoo](https://github.com/hqucv/siamban/blob/master/MODEL_ZOO.md))  
+Download **siamban_r50_l234** and **siamban_r50_l234_otb** and rename them to **model.pth** and **model_vot.pth**, respectively.   
+Put them under pysot/experiments/siamban_r50.   
+We use **model.pth** test OTB2015 and **model_vot.pth** test VOT2018, UAV123, and LaSOT.  
 
-4. SiamGAT([Model Zoo](https://github.com/ohhhyeahhh/SiamGAT))
-Download models trained for OTB2015 and LaSOT and rename them to **model.pth**.
-Put them under pysot/experiments/Siamgat_googlenet and pysot/experiments/Siamgat_googlenet_lasot, respectively.
+4. SiamGAT([Model Zoo](https://github.com/ohhhyeahhh/SiamGAT))  
+Download models trained for OTB2015 and LaSOT and rename them to **model.pth**.  
+Put them under pysot/experiments/Siamgat_googlenet and pysot/experiments/Siamgat_googlenet_lasot, respectively.  
 
 
 6. Perturbation Generators  
