@@ -48,9 +48,11 @@ Put them under pysot/experiments/Siamgat_googlenet and pysot/experiments/Siamgat
 
 
 6. Perturbation Generators  
-Download checkpoints you need, then put them under checkpoints/<MODEL_NAME>/  
-([Google Drive](https://drive.google.com/open?id=117GuYBQpj8Sq4yUNj7MRdyNciTCkpzXL),
-[Baidu](https://pan.baidu.com/s/1rlpzCWczWf6Hw5YnnQThOw)[Extraction code: 98rb])
+Download checkpoints you need, then put them under checkpoints/<MODEL_NAME>/   
+([Google Drive](https://drive.google.com/open?id=117GuYBQpj8Sq4yUNj7MRdyNciTCkpzXL),  
+[Baidu](https://pan.baidu.com/s/1rlpzCWczWf6Hw5YnnQThOw)[Extraction code: 98rb])  
+
+
 #### Set some paths
 **Step1**: Add pix2pix and pysot to environment variables   
 ```
@@ -72,11 +74,13 @@ project_path_ = <CSA_PATH>
 dataset_root_ = <DATASET_ROOT>
 train_set_path_ = <TRAIN_SET_PATH>
 ## Training (Optional)
-**Option1: Use Default Settings**  
-Train a generator for attacking search regions (**Cooling+Shrinking**)
+**Train a generator you need.**
+**Option1: Attacking template branch**  
+
 ```
-python train1.py # See visualization in http://localhost:8097/
+python train.py
 ```
+
 Train a generator for attacking search regions (**Only Cooling**)  
 ```
 python train0.py # See visualization in http://localhost:8096/
