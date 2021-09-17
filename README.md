@@ -1,8 +1,9 @@
+## Cross-Correlation Attack: Adversarial Attack for Visual Object Tracking
+## Abstract
+
+This code are main based on CSA(https://github.com/MasterBin-IIAU/CSA/), Pysot(https://github.com/STVIR/pysot), and Pytracking(https://github.com/visionml/pytracking).
+
 ## Installation
-This code has been tested on the following environment:  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NVIDIA RTX-2080Ti  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ubuntu 18.04  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CUDA 10.0  
 #### Clone the repository
 ```
 git clone https://github.com/Rongmiq/CCA.git
