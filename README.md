@@ -1,7 +1,7 @@
 ## Cross-Correlation Attack: Adversarial Attack for Visual Object Tracking
 ## Abstract
 
-This code are main based on CSA(https://github.com/MasterBin-IIAU/CSA/), Pysot(https://github.com/STVIR/pysot), and Pytracking(https://github.com/visionml/pytracking).
+This code are main based on CSA (https://github.com/MasterBin-IIAU/CSA/), Pysot (https://github.com/STVIR/pysot), and Pytracking (https://github.com/visionml/pytracking). More support can be found there.
 
 ## Installation
 #### Clone the repository
@@ -18,7 +18,7 @@ pip install -r requirements.txt
 conda install pillow=6.1
 ```
 
-#### Prepare the training set (optional)
+#### Prepare the training set (optional), from CSA.
 1. Download the training set of GOT-10K.   
 2. Then change 'got10k_path' and 'save_path' in Unified_GOT10K_process.py to yours.    
 3. Finally, run the following script.   
