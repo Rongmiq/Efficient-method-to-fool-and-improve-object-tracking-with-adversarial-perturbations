@@ -126,15 +126,13 @@ class GtemplatesearchL2500Model(BaseModel):
         '''Then crop back to (255,255)'''
         self.search_adv1 = torch.nn.functional.interpolate(search512_adv1, size=target_sz, mode='bilinear')
         self.search_adv255 = self.search_adv1 * 127.5 + 127.5
-
+        self.search_adv255 = torch.clamp(self.search_adv255, min=0, max=255)
         self.template_adv1 = torch.nn.functional.interpolate(template512_adv1, size=(127,127), mode='bilinear')
         self.template_adv255 = self.template_adv1 * 127.5 + 127.5
+        self.template_adv255 = torch.clamp(self.template_adv255, min=0, max=255)
         '''for visualization'''
         self.search_clean_vis = self.search_clean1[0:1]
         self.search_adv_vis = self.search_adv1[0:1]
-        # self.template_clean_vis = self.template_clean1
-        # self.template_adv_vis = self.template_adv1
-
 
     def backward_G(self):
         """Calculate GAN and L2 loss for the generator"""
