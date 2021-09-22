@@ -113,7 +113,7 @@ class GsearchL21000CenModel(BaseModel):
                 '''Then crop back to (127,127)'''
                 self.template_adv127_1 = torch.nn.functional.interpolate(template_adv512_1, size=(127,127), mode='bilinear')
                 self.template_adv127_255 = self.template_adv127_1 * 127.5 + 127.5
-                self.img_adv = self.template_adv127_255
+                self.img_adv = torch.clamp(self.template_adv127_255, min=0, max=255)
 
             elif self.clean_img.shape[-1] == 255:
                 self.search_clean255_1 = self.clean_img
@@ -122,8 +122,8 @@ class GsearchL21000CenModel(BaseModel):
                 '''Then crop back to (255,255)'''
                 self.search_adv255_1 = torch.nn.functional.interpolate(search_adv512_1, size=target_sz, mode='bilinear')
                 self.search_adv255_255 = self.search_adv255_1 * 127.5 + 127.5
-                self.img_adv = self.search_adv255_255
-
+                self.img_adv = torch.clamp(self.search_adv255_255, min=0, max=255)
+            
 
     def backward_G(self):
         """Calculate GAN and L2 loss for the generator"""
