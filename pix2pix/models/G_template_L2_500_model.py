@@ -64,8 +64,7 @@ class GtemplateL2500Model(BaseModel):
         # self.loss_names = ['G', 'G_L2','cos0', 'cos1', 'cos2', 'cos3', 'cos4', 'cos5']
         self.loss_names = ['G', 'G_L2', 'G_Linf','cos', 'dis']
         # specify the images you want to save/display. The training/test scripts will call <BaseModel.get_current_visuals>
-        # self.visual_names = ['real_A', 'fake_B', 'real_B']
-        self.visual_names = ['template_clean1', 'template_adv1']
+        self.visual_names = ['template_clean_vis', 'template_adv_vis']
         # specify the models you want to save to the disk. The training/test scripts will call <BaseModel.save_networks> and <BaseModel.load_networks>
         if self.isTrain:
             self.model_names = ['G']
@@ -104,16 +103,6 @@ class GtemplateL2500Model(BaseModel):
         self.template_clean1 = normalize(self.template_clean255)  # shape=[1,3,127,127]  (0,255) ---> (-1,1)
         self.search_clean255 = input[1].squeeze(0).cuda()  # pytorch tensor, shape=[N,3,255,255]
 
-    def tensorshow(self, tensor, title=None):
-        image = tensor.cpu().clone()  # we clone the tensor to not do changes on it
-        image = image.squeeze(0)  # remove the fake batch dimension
-        unloader = transforms.ToPILImage()
-        image = unloader(image)
-        plt.imshow(image)
-        if title is not None:
-            plt.title(title)
-        plt.pause(0.001)
-
     def forward(self):
         """Run forward pass; called by both functions <optimize_parameters> and <test>."""
         '''pad to (128,128)'''
@@ -124,7 +113,9 @@ class GtemplateL2500Model(BaseModel):
         '''Then crop back to (127,127)'''
         self.template_adv1 = template128_adv[:, :, 1:, 1:]
         self.template_adv255 = self.template_adv1 * 127.5 + 127.5  # [0,255]
-
+        self.template_adv255 =torch.clamp(self.template_adv255, min=0, max=255)
+        self.template_clean_vis = self.template_clean1[0:1]
+        self.template_adv_vis = self.template_adv1[0:1]
 
     def backward_G(self):
         """Calculate GAN and L1 loss for the generator"""
