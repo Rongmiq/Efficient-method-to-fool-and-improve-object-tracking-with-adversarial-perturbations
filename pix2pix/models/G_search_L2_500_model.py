@@ -105,6 +105,7 @@ class GsearchL2500Model(BaseModel):
         patch512_adv1 = patch512_clean1 + self.netG(patch512_clean1)  # Residual form: G(A)+A
         patch_adv1 = torch.nn.functional.interpolate(patch512_adv1, size=target_sz, mode='bilinear')
         patch_adv255 = patch_adv1 * 127.5 + 127.5
+        patch_adv255 = torch.clamp(patch, min=0, max=255)
         return patch_adv255
         
     def transform_template(self,patch_clean1,target_sz=(255,255)):
@@ -115,6 +116,7 @@ class GsearchL2500Model(BaseModel):
         patch512_adv1 = patch512_clean1 + adv_patch  # Residual form: G(A)+A
         patch_adv1 = torch.nn.functional.interpolate(patch512_adv1, size=target_sz, mode='bilinear')
         patch_adv255 = patch_adv1 * 127.5 + 127.5
+        patch_adv255 = torch.clamp(patch, min=0, max=255)
         return patch_adv255
 
 
@@ -126,6 +128,7 @@ class GsearchL2500Model(BaseModel):
         '''Then crop back to (255,255)'''
         self.search_adv1 = torch.nn.functional.interpolate(search512_adv1, size=target_sz, mode='bilinear')
         self.search_adv255 = self.search_adv1 * 127.5 + 127.5
+        self.search_adv255 = torch.clamp(self.search_adv255, min=0, max=255)
         '''for visualization'''
         self.search_clean_vis = self.search_clean1[0:1]
         self.search_adv_vis = self.search_adv1[0:1]
