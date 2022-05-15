@@ -1,4 +1,4 @@
-## Cross-Correlation Attack: Adversarial Attack for Visual Object Tracking
+## Efficient method to fool and improve object tracking with adversarial perturbations.
 The code will be all open source in the future and is currently being sorted out. . .
 ## Abstract
 
