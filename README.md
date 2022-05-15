@@ -3,8 +3,8 @@ The code will be all open source in the future and is currently being sorted out
 ## Abstract
 
 <p align="center"> <img src="imgs/adv_process.png" width="800" hight='400'/></p>
-<p align="center"> <img src="images/MOT-03-III.gif" width="600" hight='400'/> III Attack </p>
-<p align="center"> <img src="images/MOT17-03-IDI.gif" width="600" hight='400'/> IDI Attack </p>
+<p align="center"> <img src="imgs/attack_otb_vis.png" width="600" hight='400'/> Attack </p>
+<p align="center"> <img src="imgs/data_aug.png" width="600" hight='400'/> Data Aug </p>
 
 This code are main based on ([CSA](https://github.com/MasterBin-IIAU/CSA/)), ([Pysot](https://github.com/STVIR/pysot)), and ([Pytracking](https://github.com/visionml/pytracking)).
 
